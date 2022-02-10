@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        
         <div onMouseDown={(e) => 
           {
             setIsCalculating(true)
@@ -30,17 +31,18 @@ function App() {
             if (isCalculating) {
               console.log(e)
               setCalcWidth(e.clientX - clientX)
-              setCalcHeight(e.clientY- clientY)
+              setCalcHeight(e.clientY - clientY)
             }
-            
           }}
           onMouseUp = {() => {
             setIsCalculating(false)
             setHeight(calcHeight)
             setWidth(calcWidth)
+            
           }}
           style={{position: 'relative', height: '100vh', width: "100vw"}}
           >
+            <div>incredible drawable div (kind of)</div>
         <div >
           <div>
             <img src={cat} />
