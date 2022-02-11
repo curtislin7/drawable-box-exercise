@@ -1,10 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+describe('renders the text i put in the screen', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
 
+  it('does something', () => {
+    const linkElement = screen.getByText(/incredible/i);
+    expect(linkElement).toBeInTheDocument();
+  })
   // add test simulating click and drag
+  // todo curtis: figure out how to oranize this tests
+  // todo: figure out how to render per function
 });
